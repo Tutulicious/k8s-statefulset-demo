@@ -1,0 +1,12 @@
+# headless-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx # The name of our service
+spec:
+  ports:
+  - port: 80
+    name: web
+  clusterIP: None # This makes the service "headless"
+  selector:
+    app: nginx # Selects pods with the label "app: nginx"
