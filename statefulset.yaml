@@ -32,11 +32,11 @@ spec:
         volumeMounts:
         - name: www
           mountPath: /usr/share/nginx/html
-    volumeClaimTempates:
+  volumeClaimTemplates:
     - metadata:
         name: www
       spec:
-        accessModes: [ "ReadWriteOnce " ]
+        accessModes: [ "ReadWriteOnce" ]
         resources:
           requests:
             storage: 1Gi
